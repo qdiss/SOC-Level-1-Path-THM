@@ -1,4 +1,4 @@
-# SOC Analyst Portfolio — Adis Klobodanović
+# SOC Analyst Portfolio - Adis Klobodanović
 
 Documentation of my progress through the TryHackMe **SOC Level 1** learning
 path, part of my transition from a software/DevOps background into
@@ -9,12 +9,12 @@ cybersecurity, specifically toward a SOC Analyst role.
 I come from a software/DevOps engineering background (Linux, Nginx,
 PostgreSQL, cloud VMs) and I'm currently building hands-on security
 skills through TryHackMe while working toward a career as a SOC
-Analyst. This repository documents that process — writeups, notes, and
+Analyst. This repository documents that process - writeups, notes, and
 reflections from each room I complete.
 
 ## Progress
 
-**SOC Level 1 — 14 modules**
+**SOC Level 1 - 14 modules**
 
 - [x] Blue Team Introduction 
   - [x] Junior Security Analyst Intro
@@ -65,7 +65,7 @@ reflections from each room I complete.
 
 Each folder corresponds to a module in the TryHackMe SOC Level 1 path.
 Each room has its own subfolder with a detailed writeup covering the
-analysis process, tools used, and key takeaways — not answers or
+analysis process, tools used, and key takeaways - not answers or
 flags, in line with TryHackMe's guidelines.
 
 ## Skills Covered So Far
