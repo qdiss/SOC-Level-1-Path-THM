@@ -16,12 +16,17 @@ reflections from each room I complete.
 
 **SOC Level 1 — 14 modules**
 
-- [x] Blue Team Introduction — *in progress*
+- [x] Blue Team Introduction 
   - [x] Junior Security Analyst Intro
-  - [ ] SOC Role in Blue Team
-  - [ ] Humans as Attack Vectors
-  - [ ] Systems as Attack Vectors
-- [ ] SOC Team Internals
+  - [x] SOC Role in Blue Team
+  - [x] Humans as Attack Vectors
+  - [x] Systems as Attack Vectors
+- [x] SOC Team Internals - *in progress*
+  - [x] SOC L1 Alert Triage
+  - [ ] SOC L1 Alert Reporting
+  - [ ] SOC Workbooks and Lookups
+  - [ ] SOC Metrics and Objectives
+  - [ ] Introduction to Phising
 - [ ] Core SOC Solutions
 - [ ] Cyber Defence Frameworks
 - [ ] Phishing Analysis
@@ -65,7 +70,9 @@ flags, in line with TryHackMe's guidelines.
 
 ## Skills Covered So Far
 
-- SOC analyst workflow and shift handoff procedures
+- SOC team structure, escalation paths, and analyst career progression
+- Social engineering recognition (phishing, deepfakes, impersonation)
+- Vulnerability vs. misconfiguration triage and remediation planning
 - Alert triage and severity-based prioritization
 - Incident escalation and documentation
 
@@ -78,5 +85,5 @@ as new tools are introduced in later modules)*
 
 ## Contact
 
-Feel free to connect — I'm actively looking for opportunities in
-security operations.
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Adis_Klobodanovi%C4%87-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/klobodanovic-adis/)
+[![Email](https://img.shields.io/badge/Email-klobodanovic.adis.21%40size.ba-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:klobodanovic.adis.21@size.ba)
