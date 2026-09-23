@@ -1,83 +1,81 @@
-# Junior Security Analyst Intro — TryHackMe SOC Level 1
+# Junior Security Analyst Intro - TryHackMe SOC Level 1
 
-**Module:** Blue Team Introduction
-**Date completed:** 2026-09-22
-**Room link:** https://tryhackme.com/room/junsecurityanalystintro
-**Path:** SOC Level 1
+- **Module:** Blue Team Introduction
+- **Date completed:** 2026-09-23
+- **Room link:** https://tryhackme.com/room/jrsecanalystintrouxo
+- **Path:** SOC Level 1
 
 ## Overview
 
-This room simulates a day in the life of a Security Analyst working in a
-SOC — from the morning shift handoff and reviewing overnight alerts, to
-triaging suspicious events, and escalating a confirmed incident to a
-Tier 2 analyst. The focus isn't deep technical analysis, but
-understanding the **workflow, responsibilities, and mindset** of an L1
-analyst.
+This room introduces the structure of a Security Operations Center
+(SOC) and the different roles within it, then walks through a
+simulated day in the life of a Security Analyst - from daily routines
+to hands-on alert investigation and escalation.
 
 ## Objectives
 
-- Understand the daily responsibilities of a SOC L1 analyst
-- Learn the shift handoff process and why it matters
-- Practice alert triage and prioritization
-- Understand when and how to escalate an incident
+- Understand the different roles that make up a SOC team
+- Learn the daily responsibilities of a Security Analyst
+- Practice investigating a security alert end-to-end
+- Practice escalating and containing a confirmed threat
 
 ## Tools / Concepts Covered
 
-- SIEM dashboard (simulated environment)
-- Alert triage workflow: Detect → Investigate → Escalate/Close
-- Alert severity levels (Critical / High / Medium / Low)
-- SOC shift handoff documentation
-- Incident escalation reporting
+- SOC team structure (Analyst, Engineer, Manager, Incident Responder)
+- IP reputation/investigation tooling ("IP Hunter")
+- Alert triage and escalation workflow
+- Basic containment action (blocking a malicious IP)
 
 ## Analysis Process
 
-### Step 1 — Morning Check (Shift Handoff)
+### Step 1 - Understanding the SOC Team Structure
 
-The first task of the shift is reviewing notes left by the previous
-analyst and any open alerts carried over from the night shift. This
-step is critical — missing handoff information can lead to duplicated
-work or, worse, missing an active incident that is already in progress.
+Before touching any alert, the room breaks down the different roles in
+a SOC: the Security Analyst (first line of defense, monitors and
+investigates), the SOC Engineer (maintains the tools that generate
+alerts), the SOC Manager (runs the team day-to-day), and the Incident
+Responder (only engaged for major incidents). Understanding who does
+what clarified where an L1 analyst's responsibility starts and ends -
+and when something should be handed off rather than handled solo.
 
-### Step 2 — Alert Triage
+### Step 2 - A Day in the Life (Sam's Journal)
 
-The room presents a list of alerts sorted by severity
-(Critical/High/Medium/Low). I worked through the following logic:
+The room includes an interactive walkthrough of a typical analyst's
+day - reviewing security news, checking alert queues, attending team
+discussions, and coordinating with other teams when an issue crosses
+departments. This reinforced that the job isn't just reactive
+alert-clicking; staying aware of current threats and campaigns in the
+wild is part of the daily routine, since it directly informs what to
+watch for internally.
 
-| Severity | Action |
-|---|---|
-| Critical / High | Investigate immediately, potential escalation |
-| Medium | Investigate in queue order, check context (IP reputation, known false positives) |
-| Low | Document and close if no indicator of compromise is found |
+### Step 3 - Hands-On Alert Investigation
 
-**Key takeaway:** an L1 analyst does not resolve every issue alone —
-the job is to identify, add context, and hand off appropriately when
-needed.
-
-### Step 3 — Escalation
-
-When an alert shows signs of a genuine compromise (e.g. repeated
-failed login attempts followed by a successful login from an unusual
-location), the room walks through writing an escalation report:
-what happened, why it's suspicious, what evidence was gathered, and
-the recommended urgency level.
+The practical scenario required identifying the relevant alert in a
+queue, extracting the suspicious IP address, and investigating it
+using an IP reputation lookup tool. Based on the findings, the next
+steps were to escalate the alert to the appropriate person and take a
+containment action - blocking the IP to stop further attempts while
+the investigation continued.
 
 ## Outcome / Classification
 
-Alert classified as **True Positive — Suspicious Login Activity**,
-escalated to the Tier 2 team with a complete incident timeline.
+**True Positive** - the investigated IP was confirmed malicious.
+Escalated per the room's workflow and blocked as a containment
+measure to prevent further access attempts.
 
 ## Key Takeaways
 
-This room made it clear that L1 SOC work is much more about **process
-and communication** than deep technical analysis — clear documentation
-and accurate prioritization matter just as much as technical skill.
-Coming from a DevOps background, this felt familiar — it closely
-mirrors the incident response process I used for production issues,
-just with a different focus (security rather than uptime).
+This room made the SOC hierarchy concrete for me - I now have a
+clearer picture of where an L1 analyst's role starts and ends, and why
+escalation paths exist rather than expecting one person to resolve
+everything. The hands-on investigation also reinforced a repeatable
+pattern I'll keep using: identify the indicator (IP), enrich it with
+reputation data, decide escalate vs. close, then contain if confirmed
+malicious.
 
 ## Skills Demonstrated
 
-- Alert triage and prioritization
-- SOC shift handoff procedure
-- Incident escalation documentation
-- Analytical decision-making under a structured workflow
+- Understanding of SOC team roles and escalation paths
+- IP reputation investigation
+- Alert triage and escalation decision-making
+- Basic incident containment (IP blocking)
