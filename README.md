@@ -16,19 +16,29 @@ reflections from each room I complete.
 
 **SOC Level 1 - 14 modules**
 
-- [x] Blue Team Introduction 
+- [x] Blue Team Introduction
   - [x] Junior Security Analyst Intro
   - [x] SOC Role in Blue Team
   - [x] Humans as Attack Vectors
   - [x] Systems as Attack Vectors
-- [x] SOC Team Internals - *in progress*
+- [x] SOC Team Internals
   - [x] SOC L1 Alert Triage
-  - [ ] SOC L1 Alert Reporting
-  - [ ] SOC Workbooks and Lookups
-  - [ ] SOC Metrics and Objectives
-  - [ ] Introduction to Phising
-- [ ] Core SOC Solutions
-- [ ] Cyber Defence Frameworks
+  - [x] SOC L1 Alert Reporting
+  - [x] SOC Workbooks and Lookups
+  - [x] SOC Metrics and Objectives
+  - [x] Introduction to Phishing (SOC Simulator)
+- [x] Core SOC Solutions *(in progress)*
+  - [x] Endpoint Detection and Response (EDR)
+  - [x] Splunk: Basics
+  - [x] Elastic Stack (ELK)
+  - [x] Security Orchestration, Automation, and Response (SOAR)
+- [x] Cyber Defence Frameworks - *in progress*
+  - [x] Pyramid of Pain
+  - [ ] Cyber Kill Chain
+  - [ ] Unified Kill Chain
+  - [ ] MITRE
+  - [ ] Summit
+  - [ ] Eviction
 - [ ] Phishing Analysis
 - [ ] Network Traffic Analysis
 - [ ] Network Security Monitoring
@@ -73,15 +83,20 @@ flags, in line with TryHackMe's guidelines.
 - SOC team structure, escalation paths, and analyst career progression
 - Social engineering recognition (phishing, deepfakes, impersonation)
 - Vulnerability vs. misconfiguration triage and remediation planning
-- Alert triage and severity-based prioritization
-- Incident escalation and documentation
-
-*(This list grows as more modules are completed.)*
+- Alert prioritisation, ownership, and True/False Positive classification in a SIEM dashboard
+- Alert reporting (Five Ws), escalation to L2, and incident communication
+- Context lookups (identity/asset inventory, network diagrams) and investigation workbooks
+- SOC performance metrics (FPR, MTTD, MTTA, MTTR) and SLA concepts
+- Phishing alert triage, firewall correlation, and Five Ws case reporting (SOC Simulator)
+- EDR concepts: endpoint telemetry, process tree analysis, detection and response actions
+- Splunk fundamentals: architecture, log ingestion, and basic SPL searches
+- ELK fundamentals: KQL searching, Kibana visualisations, and dashboards
+- SOAR concepts: orchestration, automation, playbooks, and workflow design
 
 ## Tools
 
-TryHackMe simulated SIEM environment, Wireshark, CyberChef *(updated
-as new tools are introduced in later modules)*
+TryHackMe simulated SIEM environment, TryHackMe SOC Simulator, URL/IP reputation tools, simulated EDR console, Splunk, Elastic Stack (Kibana) *(updated as new tools are
+introduced in later modules)*
 
 ## Contact
 
