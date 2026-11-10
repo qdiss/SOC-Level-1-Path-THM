@@ -27,19 +27,26 @@ reflections from each room I complete.
   - [x] SOC Workbooks and Lookups
   - [x] SOC Metrics and Objectives
   - [x] Introduction to Phishing (SOC Simulator)
-- [x] Core SOC Solutions *(in progress)*
+- [x] Core SOC Solutions 
   - [x] Endpoint Detection and Response (EDR)
   - [x] Splunk: Basics
   - [x] Elastic Stack (ELK)
   - [x] Security Orchestration, Automation, and Response (SOAR)
-- [x] Cyber Defence Frameworks - *in progress*
+- [x] Cyber Defence Frameworks 
   - [x] Pyramid of Pain
-  - [ ] Cyber Kill Chain
-  - [ ] Unified Kill Chain
-  - [ ] MITRE
-  - [ ] Summit
-  - [ ] Eviction
-- [ ] Phishing Analysis
+  - [x] Cyber Kill Chain
+  - [x] Unified Kill Chain
+  - [x] MITRE
+  - [x] Summit
+  - [x] Eviction
+- [x] Phishing Analysis - *(in progress)*
+  - [x] Phishing Analysis Fundamentals
+  - [ ] Phishing Emails in Action
+  - [ ] Phishing Analysis Tools
+  - [ ] Phishing Prevention
+  - [ ] The Greenholt Phish
+  - [ ] Snapped Phish-ing Line
+  - [ ] Phishing Unfolding
 - [ ] Network Traffic Analysis
 - [ ] Network Security Monitoring
 - [ ] Web Security Monitoring
