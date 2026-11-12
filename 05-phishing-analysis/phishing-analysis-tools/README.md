@@ -7,7 +7,7 @@
 
 ## Overview
 
-This is the second room of the Phishing Analysis module. It builds on the fundamentals room by covering the tools that enable deeper email analysis: which artifacts to collect, how to check IP, URL, and file reputation, how to detonate attachments in malware sandboxes, and how PhishTool ties it together. I applied this by investigating three real-world phishing cases using a lab virtual machine and ANY.RUN sandbox reports.
+This is the third room of the Phishing Analysis module. It builds on the fundamentals room by covering the tools that enable deeper email analysis: which artifacts to collect, how to check IP, URL, and file reputation, how to detonate attachments in malware sandboxes, and how PhishTool ties it together. I applied this by investigating three real-world phishing cases using a lab virtual machine and ANY.RUN sandbox reports.
 
 ## Objectives
 
