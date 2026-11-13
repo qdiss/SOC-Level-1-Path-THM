@@ -39,15 +39,20 @@ reflections from each room I complete.
   - [x] MITRE
   - [x] Summit
   - [x] Eviction
-- [x] Phishing Analysis - *(in progress)*
+- [x] Phishing Analysis
   - [x] Phishing Analysis Fundamentals
-  - [ ] Phishing Emails in Action
-  - [ ] Phishing Analysis Tools
-  - [ ] Phishing Prevention
-  - [ ] The Greenholt Phish
-  - [ ] Snapped Phish-ing Line
-  - [ ] Phishing Unfolding
-- [ ] Network Traffic Analysis
+  - [x] Phishing Emails in Action
+  - [x] Phishing Analysis Tools
+  - [x] Phishing Prevention
+  - [x] The Greenholt Phish
+  - [x] Snapped Phish-ing Line
+  - [x] Phishing Unfolding
+- [x] Network Traffic Analysis - *(in progress)*
+  - [x]  Phishing Analysis Fundamentals
+  - [ ] Wireshark: The Basics
+  - [ ] Wireshark: Packet Operations
+  - [ ] Wireshark: Traffic Analysis
+  - [ ] Network Miner
 - [ ] Network Security Monitoring
 - [ ] Web Security Monitoring
 - [ ] Windows Security Monitoring
@@ -86,7 +91,7 @@ analysis process, tools used, and key takeaways - not answers or
 flags, in line with TryHackMe's guidelines.
 
 ## Skills Covered So Far
-
+ 
 - SOC team structure, escalation paths, and analyst career progression
 - Social engineering recognition (phishing, deepfakes, impersonation)
 - Vulnerability vs. misconfiguration triage and remediation planning
@@ -99,11 +104,21 @@ flags, in line with TryHackMe's guidelines.
 - Splunk fundamentals: architecture, log ingestion, and basic SPL searches
 - ELK fundamentals: KQL searching, Kibana visualisations, and dashboards
 - SOAR concepts: orchestration, automation, playbooks, and workflow design
-
+- Indicator analysis using the Pyramid of Pain (hashes, IPs, domains, artifacts, tools, TTPs)
+- Cyber Kill Chain phases and mapping attacker activity to attack stages
+- Unified Kill Chain: classifying attacker activity across In / Through / Out phases
+- MITRE ATT&CK, CAR, and D3FEND: mapping TTPs, profiling threat groups, and planning detections
+- Purple-team detection engineering: using Pyramid of Pain levels to prioritise detections
+- Threat-informed hunting: turning an APT group's ATT&CK techniques into monitoring priorities
+- Email header and body analysis, attachment decoding, and defanging of indicators
+- Phishing technique recognition: spoofing, link manipulation, tracking pixels, credential harvesting, malicious attachments
+- Phishing kit analysis, file hash lookups (VirusTotal), and campaign scoping
+- Network traffic analysis fundamentals: TCP/IP layer visibility, North-South vs. East-West flows, packet capture, and NetFlow/IPFIX
 ## Tools
-
-TryHackMe simulated SIEM environment, TryHackMe SOC Simulator, URL/IP reputation tools, simulated EDR console, Splunk, Elastic Stack (Kibana) *(updated as new tools are
+ 
+TryHackMe simulated SIEM environment, TryHackMe SOC Simulator, URL/IP reputation tools, simulated EDR console, Splunk, Elastic Stack (Kibana), CyberChef *(updated as new tools are
 introduced in later modules)*
+ 
 
 ## Contact
 
