@@ -1,7 +1,7 @@
 # SOC Analyst Portfolio - Adis Klobodanović
 
 Documentation of my progress through the TryHackMe **SOC Level 1** learning
-path, part of my transition from a software/DevOps background into
+path, part of my transition from a software engineer background into
 cybersecurity, specifically toward a SOC Analyst role.
 
 ## About Me
@@ -47,13 +47,19 @@ reflections from each room I complete.
   - [x] The Greenholt Phish
   - [x] Snapped Phish-ing Line
   - [x] Phishing Unfolding
-- [x] Network Traffic Analysis - *(in progress)*
+- [x] Network Traffic Analysis 
   - [x]  Phishing Analysis Fundamentals
-  - [ ] Wireshark: The Basics
-  - [ ] Wireshark: Packet Operations
-  - [ ] Wireshark: Traffic Analysis
-  - [ ] Network Miner
-- [ ] Network Security Monitoring
+  - [x] Wireshark: The Basics
+  - [x] Wireshark: Packet Operations
+  - [x] Wireshark: Traffic Analysis
+  - [x] Network Miner
+- [x] Network Security Monitoring - *(in progress)*
+  - [x] Network Security Essentials
+  - [ ] Network Discovery Detection
+  - [ ] Data Exfiltration Detection
+  - [ ] Man-in-the-Middle Detection
+  - [ ] IDS Fundamentals
+  - [ ] Snort
 - [ ] Web Security Monitoring
 - [ ] Windows Security Monitoring
 - [ ] Linux Security Monitoring
@@ -114,9 +120,13 @@ flags, in line with TryHackMe's guidelines.
 - Phishing technique recognition: spoofing, link manipulation, tracking pixels, credential harvesting, malicious attachments
 - Phishing kit analysis, file hash lookups (VirusTotal), and campaign scoping
 - Network traffic analysis fundamentals: TCP/IP layer visibility, North-South vs. East-West flows, packet capture, and NetFlow/IPFIX
+- Wireshark packet analysis: statistics views, display filters, and advanced filter operators
+- Wireshark fundamentals: packet dissection by layer, stream following, file export, and expert information
+- Attack detection in packet captures: Nmap scans, ARP poisoning, Log4j, FTP brute force, user-agent anomalies, and HTTPS decryption
+- Network forensics with NetworkMiner: host profiling, credential and file extraction from PCAPs
 ## Tools
  
-TryHackMe simulated SIEM environment, TryHackMe SOC Simulator, URL/IP reputation tools, simulated EDR console, Splunk, Elastic Stack (Kibana), CyberChef *(updated as new tools are
+TryHackMe simulated SIEM environment, TryHackMe SOC Simulator, URL/IP reputation tools, simulated EDR console, Splunk, Elastic Stack (Kibana), CyberChef, Wireshark, NetworkMiner *(updated as new tools are
 introduced in later modules)*
  
 
