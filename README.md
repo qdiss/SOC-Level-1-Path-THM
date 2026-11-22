@@ -53,14 +53,18 @@ reflections from each room I complete.
   - [x] Wireshark: Packet Operations
   - [x] Wireshark: Traffic Analysis
   - [x] Network Miner
-- [x] Network Security Monitoring - *(in progress)*
+- [x] Network Security Monitoring 
   - [x] Network Security Essentials
-  - [ ] Network Discovery Detection
-  - [ ] Data Exfiltration Detection
-  - [ ] Man-in-the-Middle Detection
-  - [ ] IDS Fundamentals
-  - [ ] Snort
-- [ ] Web Security Monitoring
+  - [x] Network Discovery Detection
+  - [x] Data Exfiltration Detection
+  - [x] Man-in-the-Middle Detection
+  - [x] IDS Fundamentals
+  - [x] Snort
+- [x] Web Security Monitoring - *(in progress)*
+  - [x] Web Security Essentials
+  - [x] Detecting Web Attacks
+  - [x] Detecting Web Shells
+  - [x] Detecting Web DDoS
 - [ ] Windows Security Monitoring
 - [ ] Linux Security Monitoring
 - [ ] Malware Concepts for SOC
@@ -124,9 +128,12 @@ flags, in line with TryHackMe's guidelines.
 - Wireshark fundamentals: packet dissection by layer, stream following, file export, and expert information
 - Attack detection in packet captures: Nmap scans, ARP poisoning, Log4j, FTP brute force, user-agent anomalies, and HTTPS decryption
 - Network forensics with NetworkMiner: host profiling, credential and file extraction from PCAPs
+- Data exfiltration detection over DNS, HTTP, FTP, and ICMP using Wireshark and Splunk
+- MITM attack detection: ARP spoofing, DNS spoofing, and SSL stripping in packet captures
+- Snort IDS/IPS: operating modes, PCAP investigation, and writing detection rules
 ## Tools
  
-TryHackMe simulated SIEM environment, TryHackMe SOC Simulator, URL/IP reputation tools, simulated EDR console, Splunk, Elastic Stack (Kibana), CyberChef, Wireshark, NetworkMiner *(updated as new tools are
+TryHackMe simulated SIEM environment, TryHackMe SOC Simulator, URL/IP reputation tools, simulated EDR console, Splunk, Elastic Stack (Kibana), CyberChef, Wireshark, NetworkMiner, Snort *(updated as new tools are
 introduced in later modules)*
  
 
