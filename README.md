@@ -1,76 +1,33 @@
 # SOC Analyst Portfolio - Adis Klobodanović
 
-Documentation of my progress through the TryHackMe **SOC Level 1** learning
-path, part of my transition from a software engineer background into
-cybersecurity, specifically toward a SOC Analyst role.
+Documentation of my progress through the TryHackMe SOC Level 1 learning path, part of my transition from a software engineer background into cybersecurity, specifically toward a SOC Analyst role.
 
 ## About Me
 
-I come from a software/DevOps engineering background (Linux, Nginx,
-PostgreSQL, cloud VMs) and I'm currently building hands-on security
-skills through TryHackMe while working toward a career as a SOC
-Analyst. This repository documents that process - writeups, notes, and
-reflections from each room I complete.
+I come from a software engineering background and I'm currently building hands-on security skills through TryHackMe, EC-Council and CISCO Networking Academ while working toward a career as a SOC Analyst. This repository documents that process - writeups, notes, and reflections from each room/course I complete.
 
-## Progress
+## Progress - TryHackMe
 
 **SOC Level 1 - 14 modules**
 
-- [x] Blue Team Introduction
-  - [x] Junior Security Analyst Intro
-  - [x] SOC Role in Blue Team
-  - [x] Humans as Attack Vectors
-  - [x] Systems as Attack Vectors
-- [x] SOC Team Internals
-  - [x] SOC L1 Alert Triage
-  - [x] SOC L1 Alert Reporting
-  - [x] SOC Workbooks and Lookups
-  - [x] SOC Metrics and Objectives
-  - [x] Introduction to Phishing (SOC Simulator)
-- [x] Core SOC Solutions 
-  - [x] Endpoint Detection and Response (EDR)
-  - [x] Splunk: Basics
-  - [x] Elastic Stack (ELK)
-  - [x] Security Orchestration, Automation, and Response (SOAR)
-- [x] Cyber Defence Frameworks 
-  - [x] Pyramid of Pain
-  - [x] Cyber Kill Chain
-  - [x] Unified Kill Chain
-  - [x] MITRE
-  - [x] Summit
-  - [x] Eviction
-- [x] Phishing Analysis
-  - [x] Phishing Analysis Fundamentals
-  - [x] Phishing Emails in Action
-  - [x] Phishing Analysis Tools
-  - [x] Phishing Prevention
-  - [x] The Greenholt Phish
-  - [x] Snapped Phish-ing Line
-  - [x] Phishing Unfolding
-- [x] Network Traffic Analysis 
-  - [x]  Phishing Analysis Fundamentals
-  - [x] Wireshark: The Basics
-  - [x] Wireshark: Packet Operations
-  - [x] Wireshark: Traffic Analysis
-  - [x] Network Miner
-- [x] Network Security Monitoring 
-  - [x] Network Security Essentials
-  - [x] Network Discovery Detection
-  - [x] Data Exfiltration Detection
-  - [x] Man-in-the-Middle Detection
-  - [x] IDS Fundamentals
-  - [x] Snort
-- [x] Web Security Monitoring - *(in progress)*
-  - [x] Web Security Essentials
-  - [x] Detecting Web Attacks
-  - [x] Detecting Web Shells
-  - [x] Detecting Web DDoS
-- [ ] Windows Security Monitoring
-- [ ] Linux Security Monitoring
-- [ ] Malware Concepts for SOC
-- [ ] Threat Analysis Tools
-- [ ] SIEM Triage for SOC
-- [ ] SOC Level 1 Capstone Challenges
+- [x] **Blue Team Introduction**
+- [x] **SOC Team Internals**
+- [x] **Core SOC Solutions**
+- [x] **Cyber Defence Frameworks**
+- [x] **Phishing Analysis**
+- [x] **Network Traffic Analysis**
+- [x] **Network Security Monitoring**
+- [x] **Web Security Monitoring**
+- [x] **Windows Security Monitoring** - *(in progress)* -
+  - [ ] Windows Logging for SOC
+  - [ ] Windows Threat Detection 1
+  - [ ] Windows Threat Detection 2
+  - [ ] Windows Threat Detection 3
+- [ ] **Linux Security Monitoring**
+- [ ] **Malware Concepts for SOC**
+- [ ] **Threat Analysis Tools**
+- [ ] **SIEM Triage for SOC**
+- [ ] **SOC Level 1 Capstone Challenges**
 
 ## Repository Structure
 
@@ -95,13 +52,10 @@ reflections from each room I complete.
 └── 14-capstone-challenges/
 ```
 
-Each folder corresponds to a module in the TryHackMe SOC Level 1 path.
-Each room has its own subfolder with a detailed writeup covering the
-analysis process, tools used, and key takeaways - not answers or
-flags, in line with TryHackMe's guidelines.
+Each folder corresponds to a module in the TryHackMe SOC Level 1 path. Each room has its own subfolder with a detailed writeup covering the analysis process, tools used, and key takeaways - not answers or flags, in line with TryHackMe's guidelines.
 
 ## Skills Covered So Far
- 
+
 - SOC team structure, escalation paths, and analyst career progression
 - Social engineering recognition (phishing, deepfakes, impersonation)
 - Vulnerability vs. misconfiguration triage and remediation planning
@@ -128,16 +82,24 @@ flags, in line with TryHackMe's guidelines.
 - Wireshark fundamentals: packet dissection by layer, stream following, file export, and expert information
 - Attack detection in packet captures: Nmap scans, ARP poisoning, Log4j, FTP brute force, user-agent anomalies, and HTTPS decryption
 - Network forensics with NetworkMiner: host profiling, credential and file extraction from PCAPs
+- Perimeter monitoring: reading firewall, WAF, VPN, and IDS logs and reconstructing an attack chain from reconnaissance to exfiltration
+- Network discovery detection: external vs. internal scanning, horizontal and vertical port scans, ping sweep, TCP SYN, and UDP scans
 - Data exfiltration detection over DNS, HTTP, FTP, and ICMP using Wireshark and Splunk
 - MITM attack detection: ARP spoofing, DNS spoofing, and SSL stripping in packet captures
 - Snort IDS/IPS: operating modes, PCAP investigation, and writing detection rules
+- Web security fundamentals: request-response cycle, layered protection of application, web server, and host, and the roles of CDN, WAF, and antivirus
+- Web attack detection: directory fuzzing, brute force, and SQL injection in access logs, confirmed in packet captures, plus writing basic WAF rules
+- Web DDoS detection: access log indicators, Splunk statistics and timechart, and layered mitigation (CDN, WAF rate limiting, challenges, input validation)
+- Web shell detection: Apache access logs, auditd correlation, file system hunting with find and grep, and Wireshark HTTP filters
+
 ## Tools
+
+TryHackMe simulated SIEM environment, TryHackMe SOC Simulator, URL/IP reputation tools, simulated EDR console, Splunk, Elastic Stack (Kibana), CyberChef, Wireshark, NetworkMiner, Snort, Apache/Nginx access logs, auditd, Linux command line (grep, find, cut) (updated as new tools are introduced in later modules)
+
+## Additional Training
  
-TryHackMe simulated SIEM environment, TryHackMe SOC Simulator, URL/IP reputation tools, simulated EDR console, Splunk, Elastic Stack (Kibana), CyberChef, Wireshark, NetworkMiner, Snort *(updated as new tools are
-introduced in later modules)*
- 
+- [ChatGPT for Compliance (EC-Council)](./additional-training/chatgpt-for-compliance/) — *in progress*
 
 ## Contact
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Adis_Klobodanovi%C4%87-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/klobodanovic-adis/)
-[![Email](https://img.shields.io/badge/Email-klobodanovic.adis.21%40size.ba-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:klobodanovic.adis.21@size.ba)
+[LinkedIn](LINKEDIN_URL) | [Email](mailto:YOUR_EMAIL)
