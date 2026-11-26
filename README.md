@@ -1,10 +1,10 @@
 # SOC Analyst Portfolio - Adis Klobodanović
 
-Documentation of my progress through the TryHackMe SOC Level 1 learning path, part of my transition from a software engineer background into cybersecurity, specifically toward a SOC Analyst role.
+Documentation of my progress through the TryHackMe SOC Level 1 learning path, part of my transition from a software engineering background into cybersecurity, specifically toward a SOC Analyst role.
 
 ## About Me
 
-I come from a software engineering background and I'm currently building hands-on security skills through TryHackMe, EC-Council and CISCO Networking Academ while working toward a career as a SOC Analyst. This repository documents that process - writeups, notes, and reflections from each room/course I complete.
+I come from a software engineering background and I'm currently building hands-on security skills through TryHackMe, EC-Council, and Cisco Networking Academy while working toward a career as a SOC Analyst. This repository documents that process - writeups, notes, and reflections from each room/course I complete.
 
 ## Progress - TryHackMe
 
@@ -18,7 +18,7 @@ I come from a software engineering background and I'm currently building hands-o
 - [x] **Network Traffic Analysis**
 - [x] **Network Security Monitoring**
 - [x] **Web Security Monitoring**
-- [x] **Windows Security Monitoring** - *(in progress)* -
+- [ ] **Windows Security Monitoring** - *(in progress)*
   - [ ] Windows Logging for SOC
   - [ ] Windows Threat Detection 1
   - [ ] Windows Threat Detection 2
@@ -49,10 +49,13 @@ I come from a software engineering background and I'm currently building hands-o
 ├── 11-malware-concepts/
 ├── 12-threat-analysis-tools/
 ├── 13-siem-triage/
-└── 14-capstone-challenges/
+├── 14-capstone-challenges/
+└── additional-training/
+    ├── chatgpt-for-compliance/
+    └── hands-on-pentesting-raspberry-pi-5/
 ```
 
-Each folder corresponds to a module in the TryHackMe SOC Level 1 path. Each room has its own subfolder with a detailed writeup covering the analysis process, tools used, and key takeaways - not answers or flags, in line with TryHackMe's guidelines.
+Each numbered folder corresponds to a module in the TryHackMe SOC Level 1 path. Each room has its own subfolder with a detailed writeup covering the analysis process, tools used, and key takeaways - not answers or flags, in line with TryHackMe's guidelines.
 
 ## Skills Covered So Far
 
@@ -94,12 +97,13 @@ Each folder corresponds to a module in the TryHackMe SOC Level 1 path. Each room
 
 ## Tools
 
-TryHackMe simulated SIEM environment, TryHackMe SOC Simulator, URL/IP reputation tools, simulated EDR console, Splunk, Elastic Stack (Kibana), CyberChef, Wireshark, NetworkMiner, Snort, Apache/Nginx access logs, auditd, Linux command line (grep, find, cut) (updated as new tools are introduced in later modules)
+TryHackMe simulated SIEM environment, TryHackMe SOC Simulator, URL/IP reputation tools, simulated EDR console, Splunk, Elastic Stack (Kibana), CyberChef, Wireshark, NetworkMiner, Snort, Apache/Nginx access logs, auditd, Linux command line (grep, find, cut) *(updated as new tools are introduced in later modules)*
 
 ## Additional Training
- 
-- [ChatGPT for Compliance (EC-Council)](./additional-training/chatgpt-for-compliance/) — *in progress*
+
+- [ChatGPT for Compliance (EC-Council)](./additional-training/chatgpt-for-compliance/) - [Certificate](https://learn.eccouncil.org/certificate/a95a3b97-bd87-4bfa-a077-95a0dada4a0a)
+- [Hands-on Penetration Testing with Raspberry Pi 5 (EC-Council)](./additional-training/hands-on-pentesting-raspberry-pi-5/) - [Certificate](https://learn.eccouncil.org/certificate/37d3680c-ef19-4ad5-a797-67fdab54d044)
 
 ## Contact
 
-[LinkedIn](LINKEDIN_URL) | [Email](mailto:YOUR_EMAIL)
+[LinkedIn](https://www.linkedin.com/in/klobodanovic-adis/) | [Email](mailto:klobodanovic.adis.21@size.ba)
