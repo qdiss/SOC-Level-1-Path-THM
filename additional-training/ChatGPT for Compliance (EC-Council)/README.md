@@ -5,7 +5,7 @@
 - **Level:** Beginner
 - **Status:** In progress
 - **Completed:** 2026-11-26
-- **Certificate:** [https://learn.eccouncil.org/certificate/a95a3b97-bd87-4bfa-a077-95a0dada4a0a](https://learn.eccouncil.org/certificate/a95a3b97-bd87-4bfa-a077-95a0dada4a0a)
+- **Certificate:** [Certificate of Completion](https://learn.eccouncil.org/certificate/a95a3b97-bd87-4bfa-a077-95a0dada4a0a)
 
 ## Overview
 
