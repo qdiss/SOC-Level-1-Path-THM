@@ -1,42 +1,237 @@
-# SOC Analyst Portfolio - Adis Klobodanović
+# Adis Klobodanović - SOC Analyst Portfolio
 
-Documentation of my progress through the TryHackMe SOC Level 1 learning path, part of my transition from a software engineering background into cybersecurity, specifically toward a SOC Analyst role.
+I'm a software engineer moving into security. This repository holds my work from the TryHackMe SOC Level 1 path: investigations, detection exercises, and case reports written the way I would write them on the job.
+
+| | |
+|---|---|
+| **Target role** | Junior SOC Analyst (L1) |
+| **Based in** | Zenica, Bosnia and Herzegovina. Looking for roles in Austria |
+| **Languages** | Bosnian (native), English (C1), German (learning) |
+| **Progress** | 8 of 14 SOC Level 1 modules done, module 9 in progress |
+| **Evidence** | 2 SOC Simulator scenarios with results, 1 EC-Council certificate |
+
+[LinkedIn](https://www.linkedin.com/in/klobodanovic-adis/) | [Email](mailto:klobodanovic.adis.21@size.ba) | [TryHackMe profile](https://tryhackme.com/p/qdiss)
 
 ## About Me
 
-I come from a software engineering background and I'm currently building hands-on security skills through TryHackMe, EC-Council, and Cisco Networking Academy while working toward a career as a SOC Analyst. This repository documents that process - writeups, notes, and reflections from each room/course I complete.
+My background is in software engineering. I'm training for a SOC analyst role through TryHackMe, EC-Council courses, and Cisco Networking Academy. Working with Linux, logs, and scripting before this helps a lot with log analysis and investigations, and this repo is where I show how I use it.
 
-## Progress - TryHackMe
+## How This Repository Works
 
-**SOC Level 1 - 14 modules**
+Every room or scenario has its own folder with a README writeup. They all use the same layout so they are quick to scan:
 
-- [x] **Blue Team Introduction**
-- [x] **SOC Team Internals**
-- [x] **Core SOC Solutions**
-- [x] **Cyber Defence Frameworks**
-- [x] **Phishing Analysis**
-- [x] **Network Traffic Analysis**
-- [x] **Network Security Monitoring**
-- [x] **Web Security Monitoring**
-- [ ] **Windows Security Monitoring** - *(in progress)*
-  - [ ] Windows Logging for SOC
-  - [ ] Windows Threat Detection 1
-  - [ ] Windows Threat Detection 2
-  - [ ] Windows Threat Detection 3
-- [ ] **Linux Security Monitoring**
-- [ ] **Malware Concepts for SOC**
-- [ ] **Threat Analysis Tools**
-- [ ] **SIEM Triage for SOC**
-- [ ] **SOC Level 1 Capstone Challenges**
+- **Overview and objectives:** what the exercise was about
+- **Analysis process:** the steps I took and why, not only the commands
+- **Outcome:** my verdict, such as true positive, false positive, or escalate
+- **Takeaways and skills:** what I learned and what it shows I can do
+
+I don't publish flags, answers, or credentials, as TryHackMe asks. The writeups are about my method and reasoning.
+
+## Featured Work
+
+| Writeup | What I did |
+|---|---|
+| [Phishing Unfolding (SOC Simulator)](./05-phishing-analysis/phishing-unfolding/) | Triaged 35 live alerts in Splunk while a phishing attack played out, found every true positive, and wrote case reports using the Five Ws |
+| [MITM Detection](./07-network-security-monitoring/mitm-detection/) | Rebuilt a chained attack (ARP spoofing, DNS spoofing, SSL stripping) from a packet capture and wrote up the timeline |
+| [Data Exfiltration Detection](./07-network-security-monitoring/data-exfiltration-detection/) | Found data leaving the network over DNS, HTTP, FTP, and ICMP by matching Wireshark captures with Splunk logs |
+| [Web Shell Detection](./08-web-security-monitoring/web-shell-detection/) | Followed a web shell upload through Apache access logs, auditd, and file system searches |
+
+## SOC Simulator Results
+
+| Scenario | Result | True positive rate | False positive rate | Alerts closed | Mean time to resolve |
+|---|---|---|---|---|---|
+| [Introduction to Phishing](./02-soc-team-internals/introduction-to-phishing/) | Passed on second attempt | 100% | 100% | 4 | about 2 min |
+| [Phishing Unfolding](./05-phishing-analysis/phishing-unfolding/) | Passed | 100% | 80% | 35 | about 1 min |
+
+I failed my first attempt at Introduction to Phishing because I marked one phishing email as harmless. In Phishing Unfolding I flagged four harmless alerts as real threats. Both writeups explain what I got wrong and what I changed afterwards.
+
+## Skills
+
+**SOC operations**
+- Alert triage, prioritisation, ownership, and true/false positive classification
+- Alert reporting with the Five Ws, escalation to L2, and incident communication
+- Investigation workbooks, identity and asset lookups, and network diagrams
+- SOC metrics (false positive rate, MTTD, MTTA, MTTR) and SLA basics
+
+**Security tools**
+- EDR: endpoint telemetry, process trees, detection and response actions
+- SIEM: Splunk (log ingestion, SPL searches, timecharts) and Elastic Stack (KQL, Kibana dashboards)
+- SOAR: orchestration, automation, and playbook design
+- Snort IDS/IPS: operating modes, PCAP investigation, and writing rules
+
+**Windows log analysis**
+- Windows event logs: logons (4624/4625), user management events, and process creation
+- Sysmon events for processes, files, registry, network, and DNS
+- PowerShell history for tracking attacker commands
+
+**Threat frameworks and hunting**
+- Pyramid of Pain, Cyber Kill Chain, and Unified Kill Chain
+- MITRE ATT&CK, CAR, and D3FEND: mapping TTPs, profiling threat groups, planning detections
+- Threat-informed hunting and purple-team detection engineering
+
+**Phishing and email analysis**
+- Email headers and bodies, attachment decoding, and defanging indicators
+- Spoofing, link manipulation, tracking pixels, and credential harvesting
+- Phishing kit analysis, file hash lookups (VirusTotal), and campaign scoping
+
+**Network analysis**
+- Wireshark: statistics, display filters, stream following, and HTTPS decryption
+- Spotting Nmap scans, network discovery, ARP poisoning, Log4j, and FTP attacks in captures
+- MITM detection and data exfiltration detection over DNS, HTTP, FTP, and ICMP
+- NetworkMiner, NetFlow/IPFIX, and perimeter log analysis
+
+**Web security monitoring**
+- Access log analysis: directory fuzzing, brute force, and SQL injection
+- Web shell detection with logs, auditd, file system searches, and network traffic
+- DoS/DDoS detection and mitigation with CDN, WAF rate limiting, and challenges
+
+## Tools
+
+TryHackMe SOC Simulator, Splunk, Elastic Stack (Kibana), Wireshark, NetworkMiner, Snort, Sysmon, Windows Event Viewer, CyberChef, VirusTotal and other URL/IP reputation tools, a simulated EDR console, Apache/Nginx access logs, auditd, and the Linux command line (grep, find, cut). I add to this list as I learn new tools.
+
+## Progress - TryHackMe SOC Level 1
+
+Click a module to open it.
+
+<details>
+<summary><b>1. Blue Team Introduction</b> (completed)</summary>
+
+- [x] Junior Security Analyst Intro
+- [x] SOC Role in Blue Team
+- [x] Humans as Attack Vectors
+- [x] Systems as Attack Vectors
+
+[Open writeups](./01-blue-team-introduction/)
+
+</details>
+
+<details>
+<summary><b>2. SOC Team Internals</b> (completed)</summary>
+
+- [x] SOC L1 Alert Triage
+- [x] SOC L1 Alert Reporting
+- [x] SOC Workbooks and Lookups
+- [x] SOC Metrics and Objectives
+- [x] Introduction to Phishing (SOC Simulator)
+
+[Open writeups](./02-soc-team-internals/)
+
+</details>
+
+<details>
+<summary><b>3. Core SOC Solutions</b> (completed)</summary>
+
+- [x] Endpoint Detection and Response (EDR)
+- [x] Splunk: Basics
+- [x] Elastic Stack (ELK)
+- [x] Security Orchestration, Automation, and Response (SOAR)
+
+[Open writeups](./03-core-soc-solutions/)
+
+</details>
+
+<details>
+<summary><b>4. Cyber Defence Frameworks</b> (completed)</summary>
+
+- [x] Pyramid of Pain
+- [x] Cyber Kill Chain
+- [x] Unified Kill Chain
+- [x] MITRE
+- [x] Summit
+- [x] Eviction
+
+[Open writeups](./04-cyber-defence-frameworks/)
+
+</details>
+
+<details>
+<summary><b>5. Phishing Analysis</b> (completed)</summary>
+
+- [x] Phishing Analysis Fundamentals
+- [x] Phishing Emails in Action
+- [x] Phishing Analysis Tools
+- [x] Phishing Prevention
+- [x] The Greenholt Phish
+- [x] Snapped Phish-ing Line
+- [x] Phishing Unfolding (SOC Simulator)
+
+[Open writeups](./05-phishing-analysis/)
+
+</details>
+
+<details>
+<summary><b>6. Network Traffic Analysis</b> (completed)</summary>
+
+- [x] Network Traffic Basics
+- [x] Wireshark: The Basics
+- [x] Wireshark: Packet Operations
+- [x] Wireshark: Traffic Analysis
+- [x] NetworkMiner
+
+[Open writeups](./06-network-traffic-analysis/)
+
+</details>
+
+<details>
+<summary><b>7. Network Security Monitoring</b> (completed)</summary>
+
+- [x] Network Security Essentials
+- [x] Network Discovery Detection
+- [x] Data Exfiltration Detection
+- [x] MITM Detection
+- [x] Snort
+
+[Open writeups](./07-network-security-monitoring/)
+
+</details>
+
+<details>
+<summary><b>8. Web Security Monitoring</b> (completed)</summary>
+
+- [x] Web Security Essentials
+- [x] Detecting Web Attacks
+- [x] Web Shell Detection
+- [x] Detecting Web DDoS
+
+[Open writeups](./08-web-security-monitoring/)
+
+</details>
+
+<details open>
+<summary><b>9. Windows Security Monitoring</b> (in progress)</summary>
+
+- [x] Windows Logging for SOC
+- [ ] Windows Threat Detection 1
+- [ ] Windows Threat Detection 2
+- [ ] Windows Threat Detection 3
+
+[Open writeups](./09-windows-security-monitoring/)
+
+</details>
+
+Not started yet:
+
+10. Linux Security Monitoring
+11. Malware Concepts for SOC
+12. Threat Analysis Tools
+13. SIEM Triage for SOC
+14. SOC Level 1 Capstone Challenges
+
+## What I'm Working On
+
+I'm in Windows Security Monitoring now. Windows logging is done and the three threat detection rooms are next. After that come Linux Security Monitoring, malware concepts, SIEM triage, and the capstone. Once I finish the path I plan to go for an entry-level SOC certification.
+
+## Certificates and Additional Training
+
+| Course | Provider | Status |
+|---|---|---|
+| [Hands-on Penetration Testing with Raspberry Pi 5](./additional-training/hands-on-pentesting-raspberry-pi-5/) | EC-Council | Completed, [certificate](https://learn.eccouncil.org/certificate/37d3680c-ef19-4ad5-a797-67fdab54d044) |
+| [ChatGPT for Compliance](./additional-training/chatgpt-for-compliance/) | EC-Council | Completed, [certificate](https://learn.eccouncil.org/certificate/a95a3b97-bd87-4bfa-a077-95a0dada4a0a) |
 
 ## Repository Structure
 
 ```
 ├── 01-blue-team-introduction/
-│   ├── junior-security-analyst-intro/
-│   ├── soc-role-in-blue-team/
-│   ├── humans-as-attack-vectors/
-│   └── systems-as-attack-vectors/
 ├── 02-soc-team-internals/
 ├── 03-core-soc-solutions/
 ├── 04-cyber-defence-frameworks/
@@ -50,60 +245,16 @@ I come from a software engineering background and I'm currently building hands-o
 ├── 12-threat-analysis-tools/
 ├── 13-siem-triage/
 ├── 14-capstone-challenges/
-└── additional-training/
-    ├── chatgpt-for-compliance/
-    └── hands-on-pentesting-raspberry-pi-5/
+├── additional-training/
+│   ├── chatgpt-for-compliance/
+│   └── hands-on-pentesting-raspberry-pi-5/
+└── WRITEUP-TEMPLATE.md
 ```
 
-Each numbered folder corresponds to a module in the TryHackMe SOC Level 1 path. Each room has its own subfolder with a detailed writeup covering the analysis process, tools used, and key takeaways - not answers or flags, in line with TryHackMe's guidelines.
-
-## Skills Covered So Far
-
-- SOC team structure, escalation paths, and analyst career progression
-- Social engineering recognition (phishing, deepfakes, impersonation)
-- Vulnerability vs. misconfiguration triage and remediation planning
-- Alert prioritisation, ownership, and True/False Positive classification in a SIEM dashboard
-- Alert reporting (Five Ws), escalation to L2, and incident communication
-- Context lookups (identity/asset inventory, network diagrams) and investigation workbooks
-- SOC performance metrics (FPR, MTTD, MTTA, MTTR) and SLA concepts
-- Phishing alert triage, firewall correlation, and Five Ws case reporting (SOC Simulator)
-- EDR concepts: endpoint telemetry, process tree analysis, detection and response actions
-- Splunk fundamentals: architecture, log ingestion, and basic SPL searches
-- ELK fundamentals: KQL searching, Kibana visualisations, and dashboards
-- SOAR concepts: orchestration, automation, playbooks, and workflow design
-- Indicator analysis using the Pyramid of Pain (hashes, IPs, domains, artifacts, tools, TTPs)
-- Cyber Kill Chain phases and mapping attacker activity to attack stages
-- Unified Kill Chain: classifying attacker activity across In / Through / Out phases
-- MITRE ATT&CK, CAR, and D3FEND: mapping TTPs, profiling threat groups, and planning detections
-- Purple-team detection engineering: using Pyramid of Pain levels to prioritise detections
-- Threat-informed hunting: turning an APT group's ATT&CK techniques into monitoring priorities
-- Email header and body analysis, attachment decoding, and defanging of indicators
-- Phishing technique recognition: spoofing, link manipulation, tracking pixels, credential harvesting, malicious attachments
-- Phishing kit analysis, file hash lookups (VirusTotal), and campaign scoping
-- Network traffic analysis fundamentals: TCP/IP layer visibility, North-South vs. East-West flows, packet capture, and NetFlow/IPFIX
-- Wireshark packet analysis: statistics views, display filters, and advanced filter operators
-- Wireshark fundamentals: packet dissection by layer, stream following, file export, and expert information
-- Attack detection in packet captures: Nmap scans, ARP poisoning, Log4j, FTP brute force, user-agent anomalies, and HTTPS decryption
-- Network forensics with NetworkMiner: host profiling, credential and file extraction from PCAPs
-- Perimeter monitoring: reading firewall, WAF, VPN, and IDS logs and reconstructing an attack chain from reconnaissance to exfiltration
-- Network discovery detection: external vs. internal scanning, horizontal and vertical port scans, ping sweep, TCP SYN, and UDP scans
-- Data exfiltration detection over DNS, HTTP, FTP, and ICMP using Wireshark and Splunk
-- MITM attack detection: ARP spoofing, DNS spoofing, and SSL stripping in packet captures
-- Snort IDS/IPS: operating modes, PCAP investigation, and writing detection rules
-- Web security fundamentals: request-response cycle, layered protection of application, web server, and host, and the roles of CDN, WAF, and antivirus
-- Web attack detection: directory fuzzing, brute force, and SQL injection in access logs, confirmed in packet captures, plus writing basic WAF rules
-- Web DDoS detection: access log indicators, Splunk statistics and timechart, and layered mitigation (CDN, WAF rate limiting, challenges, input validation)
-- Web shell detection: Apache access logs, auditd correlation, file system hunting with find and grep, and Wireshark HTTP filters
-
-## Tools
-
-TryHackMe simulated SIEM environment, TryHackMe SOC Simulator, URL/IP reputation tools, simulated EDR console, Splunk, Elastic Stack (Kibana), CyberChef, Wireshark, NetworkMiner, Snort, Apache/Nginx access logs, auditd, Linux command line (grep, find, cut) *(updated as new tools are introduced in later modules)*
-
-## Additional Training
-
-- [ChatGPT for Compliance (EC-Council)](./additional-training/chatgpt-for-compliance/) - [Certificate](https://learn.eccouncil.org/certificate/a95a3b97-bd87-4bfa-a077-95a0dada4a0a)
-- [Hands-on Penetration Testing with Raspberry Pi 5 (EC-Council)](./additional-training/hands-on-pentesting-raspberry-pi-5/) - [Certificate](https://learn.eccouncil.org/certificate/37d3680c-ef19-4ad5-a797-67fdab54d044)
+Each numbered folder is a module of the SOC Level 1 path. Each room inside has its own folder with a `README.md` writeup.
 
 ## Contact
+
+I'm looking for a junior SOC analyst job. You can reach me here:
 
 [LinkedIn](https://www.linkedin.com/in/klobodanovic-adis/) | [Email](mailto:klobodanovic.adis.21@size.ba)
