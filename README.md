@@ -7,7 +7,7 @@ I'm a software engineer moving into security. This repository holds my work from
 | **Target role** | Junior SOC Analyst (L1) |
 | **Based in** | Zenica, Bosnia and Herzegovina. Looking for roles in Austria |
 | **Languages** | Bosnian (native), English (C1), German (learning) |
-| **Progress** | 8 of 14 SOC Level 1 modules done, module 9 in progress |
+| **Progress** | 9 of 14 SOC Level 1 modules done, module 10 in progress |
 | **Evidence** | 2 SOC Simulator scenarios with results, 1 EC-Council certificate |
 
 [LinkedIn](https://www.linkedin.com/in/klobodanovic-adis/) | [Email](mailto:klobodanovic.adis.21@size.ba) | [TryHackMe profile](https://tryhackme.com/p/qdiss)
@@ -64,6 +64,12 @@ I failed my first attempt at Introduction to Phishing because I marked one phish
 - Sysmon events for processes, files, registry, network, and DNS
 - PowerShell history for tracking attacker commands
 
+**Linux log analysis**
+- Spotting discovery commands and judging them in context
+- Auditd and `ausearch` for process creation, with PID/PPID process tree tracing
+- SSH brute force and successful logins in `auth.log`, and ingress tool transfer detection
+- Reconstructing a cryptominer infection chain from Linux logs
+
 **Threat frameworks and hunting**
 - Pyramid of Pain, Cyber Kill Chain, and Unified Kill Chain
 - MITRE ATT&CK, CAR, and D3FEND: mapping TTPs, profiling threat groups, planning detections
@@ -87,7 +93,7 @@ I failed my first attempt at Introduction to Phishing because I marked one phish
 
 ## Tools
 
-TryHackMe SOC Simulator, Splunk, Elastic Stack (Kibana), Wireshark, NetworkMiner, Snort, Sysmon, Windows Event Viewer, CyberChef, VirusTotal and other URL/IP reputation tools, a simulated EDR console, Apache/Nginx access logs, auditd, and the Linux command line (grep, find, cut). I add to this list as I learn new tools.
+TryHackMe SOC Simulator, Splunk, Elastic Stack (Kibana), Wireshark, NetworkMiner, Snort, Sysmon, Windows Event Viewer, auditd and ausearch, CyberChef, VirusTotal and other URL/IP reputation tools, a simulated EDR console, Apache/Nginx access logs, and the Linux command line (grep, find, cut). I add to this list as I learn new tools.
 
 ## Progress - TryHackMe SOC Level 1
 
@@ -197,36 +203,47 @@ Click a module to open it.
 
 </details>
 
-<details open>
-<summary><b>9. Windows Security Monitoring</b> (in progress)</summary>
+<details>
+<summary><b>9. Windows Security Monitoring</b> (completed)</summary>
 
 - [x] Windows Logging for SOC
-- [ ] Windows Threat Detection 1
-- [ ] Windows Threat Detection 2
-- [ ] Windows Threat Detection 3
+- [x] Windows Threat Detection 1
+- [x] Windows Threat Detection 2
+- [x] Windows Threat Detection 3
 
 [Open writeups](./09-windows-security-monitoring/)
 
 </details>
 
+<details open>
+<summary><b>10. Linux Security Monitoring</b> (in progress)</summary>
+
+- [x] Linux Logging for SOC
+- [x] Linux Threat Detection 1
+- [x] Linux Threat Detection 2
+- [x] Linux Threat Detection 3
+
+[Open writeups](./10-linux-security-monitoring/)
+
+</details>
+
 Not started yet:
 
-10. Linux Security Monitoring
-11. Malware Concepts for SOC
-12. Threat Analysis Tools
-13. SIEM Triage for SOC
-14. SOC Level 1 Capstone Challenges
+- 11. Malware Concepts for SOC
+- 12. Threat Analysis Tools
+- 13. SIEM Triage for SOC
+- 14. SOC Level 1 Capstone Challenges
 
 ## What I'm Working On
 
-I'm in Windows Security Monitoring now. Windows logging is done and the three threat detection rooms are next. After that come Linux Security Monitoring, malware concepts, SIEM triage, and the capstone. Once I finish the path I plan to go for an entry-level SOC certification.
+I'm in Linux Security Monitoring now. After that come malware concepts, threat analysis tools, SIEM triage, and the capstone. Once I finish the path I plan to go for an entry-level SOC certification.
 
 ## Certificates and Additional Training
 
 | Course | Provider | Status |
 |---|---|---|
 | [Hands-on Penetration Testing with Raspberry Pi 5](./additional-training/hands-on-pentesting-raspberry-pi-5/) | EC-Council | Completed, [certificate](https://learn.eccouncil.org/certificate/37d3680c-ef19-4ad5-a797-67fdab54d044) |
-| [ChatGPT for Compliance](./additional-training/chatgpt-for-compliance/) | EC-Council | Completed, [certificate](https://learn.eccouncil.org/certificate/a95a3b97-bd87-4bfa-a077-95a0dada4a0a) |
+| [ChatGPT for Compliance](./additional-training/chatgpt-for-compliance/) | EC-Council | In progress |
 
 ## Repository Structure
 
