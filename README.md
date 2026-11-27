@@ -69,6 +69,7 @@ I failed my first attempt at Introduction to Phishing because I marked one phish
 - Auditd and `ausearch` for process creation, with PID/PPID process tree tracing
 - SSH brute force and successful logins in `auth.log`, and ingress tool transfer detection
 - Reconstructing a cryptominer infection chain from Linux logs
+- Detecting reverse shells, privilege escalation, and persistence (cron, systemd, new users, SSH keys)
 
 **Threat frameworks and hunting**
 - Pyramid of Pain, Cyber Kill Chain, and Unified Kill Chain
@@ -216,7 +217,7 @@ Click a module to open it.
 </details>
 
 <details open>
-<summary><b>10. Linux Security Monitoring</b> (in progress)</summary>
+<summary><b>10. Linux Security Monitoring</b> (completed)</summary>
 
 - [x] Linux Logging for SOC
 - [x] Linux Threat Detection 1
@@ -227,12 +228,23 @@ Click a module to open it.
 
 </details>
 
+<details open>
+<summary><b>11. Malware Concepts for SOC</b> (in progress)</summary>
+
+- [ ] Malware Classification
+- [ ] Intro to Malware Analysis
+- [ ] Living Off the Land Attacks
+- [ ] Shadow Trace - Challenge 
+
+[Open writeups](./11-malware-concepts/)
+
+</details>
+
 Not started yet:
 
-- 11. Malware Concepts for SOC
-- 12. Threat Analysis Tools
-- 13. SIEM Triage for SOC
-- 14. SOC Level 1 Capstone Challenges
+12. Threat Analysis Tools
+13. SIEM Triage for SOC
+14. SOC Level 1 Capstone Challenges
 
 ## What I'm Working On
 
