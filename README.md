@@ -7,10 +7,10 @@ I'm a software engineer moving into security. This repository holds my work from
 | **Target role** | Junior SOC Analyst (L1) |
 | **Based in** | Zenica, Bosnia and Herzegovina. Looking for roles in Austria |
 | **Languages** | Bosnian (native), English (C1), German (learning) |
-| **Progress** | 9 of 14 SOC Level 1 modules done, module 10 in progress |
-| **Evidence** | 2 SOC Simulator scenarios with results, 1 EC-Council certificate |
+| **Progress** | 10 of 14 SOC Level 1 modules done, module 11 in progress |
+| **Evidence** | 2 SOC Simulator scenarios with results, 2 EC-Council course certificates |
 
-[LinkedIn](https://www.linkedin.com/in/klobodanovic-adis/) | [Email](mailto:klobodanovic.adis.21@size.ba) | [TryHackMe profile](https://tryhackme.com/p/qdiss)
+[LinkedIn](https://www.linkedin.com/in/klobodanovic-adis/) | [Email](mailto:klobodanovic.adis.21@size.ba) | [TryHackMe profile](https://tryhackme.com/p/qdiss) | [Portfolio](https://adiss.dev)
 
 ## About Me
 
@@ -35,6 +35,7 @@ I don't publish flags, answers, or credentials, as TryHackMe asks. The writeups 
 | [MITM Detection](./07-network-security-monitoring/mitm-detection/) | Rebuilt a chained attack (ARP spoofing, DNS spoofing, SSL stripping) from a packet capture and wrote up the timeline |
 | [Data Exfiltration Detection](./07-network-security-monitoring/data-exfiltration-detection/) | Found data leaving the network over DNS, HTTP, FTP, and ICMP by matching Wireshark captures with Splunk logs |
 | [Web Shell Detection](./08-web-security-monitoring/web-shell-detection/) | Followed a web shell upload through Apache access logs, auditd, and file system searches |
+| [Linux Threat Detection 2](./10-linux-security-monitoring/linux-threat-detection-2/) | Reconstructed a cryptominer infection (SSH brute force, discovery, persistence, malware transfer) from auth and auditd logs |
 
 ## SOC Simulator Results
 
@@ -65,6 +66,11 @@ I failed my first attempt at Introduction to Phishing because I marked one phish
 - PowerShell history for tracking attacker commands
 
 **Linux log analysis**
+- Reading plain-text Linux logs in `/var/log` (`syslog`, `auth.log`, package manager logs) and filtering them with `grep`
+- Understanding system calls and why auditd and EDRs depend on them, plus the limits of bash history as evidence
+- Reading auditd rules and output (`PROCTITLE`, `SYSCALL`, `auid` vs `uid`) and searching by key with `ausearch`
+- Detecting Initial Access: SSH brute force, command injection in Nginx logs, and human-led and supply chain attacks
+- Walking a process tree up with `--pid` and listing child processes with `--ppid` to find the origin of an attack
 - Spotting discovery commands and judging them in context
 - Auditd and `ausearch` for process creation, with PID/PPID process tree tracing
 - SSH brute force and successful logins in `auth.log`, and ingress tool transfer detection
@@ -91,6 +97,9 @@ I failed my first attempt at Introduction to Phishing because I marked one phish
 - Access log analysis: directory fuzzing, brute force, and SQL injection
 - Web shell detection with logs, auditd, file system searches, and network traffic
 - DoS/DDoS detection and mitigation with CDN, WAF rate limiting, and challenges
+
+**Compliance and AI**
+- Using ChatGPT to support compliance work, with attention to its limits and risks
 
 ## Tools
 
@@ -216,7 +225,7 @@ Click a module to open it.
 
 </details>
 
-<details open>
+<details>
 <summary><b>10. Linux Security Monitoring</b> (completed)</summary>
 
 - [x] Linux Logging for SOC
@@ -231,7 +240,7 @@ Click a module to open it.
 <details open>
 <summary><b>11. Malware Concepts for SOC</b> (in progress)</summary>
 
-- [ ] Malware Classification
+- [x] Malware Classification
 - [ ] Intro to Malware Analysis
 - [ ] Living Off the Land Attacks
 - [ ] Shadow Trace - Challenge 
@@ -248,14 +257,14 @@ Not started yet:
 
 ## What I'm Working On
 
-I'm in Linux Security Monitoring now. After that come malware concepts, threat analysis tools, SIEM triage, and the capstone. Once I finish the path I plan to go for an entry-level SOC certification.
+I'm in Malware Concepts for SOC now. After that come threat analysis tools, SIEM triage, and the capstone. Once I finish the path I plan to go for an entry-level SOC certification.
 
 ## Certificates and Additional Training
 
 | Course | Provider | Status |
 |---|---|---|
 | [Hands-on Penetration Testing with Raspberry Pi 5](./additional-training/hands-on-pentesting-raspberry-pi-5/) | EC-Council | Completed, [certificate](https://learn.eccouncil.org/certificate/37d3680c-ef19-4ad5-a797-67fdab54d044) |
-| [ChatGPT for Compliance](./additional-training/chatgpt-for-compliance/) | EC-Council | In progress |
+| [ChatGPT for Compliance](./additional-training/chatgpt-for-compliance/) | EC-Council | Completed, [certificate](https://learn.eccouncil.org/certificate/a95a3b97-bd87-4bfa-a077-95a0dada4a0a) |
 
 ## Repository Structure
 
