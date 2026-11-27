@@ -7,8 +7,8 @@ I'm a software engineer moving into security. This repository holds my work from
 | **Target role** | Junior SOC Analyst (L1) |
 | **Based in** | Zenica, Bosnia and Herzegovina. Looking for roles in Austria |
 | **Languages** | Bosnian (native), English (C1), German (learning) |
-| **Progress** | 10 of 14 SOC Level 1 modules done, module 11 in progress |
-| **Evidence** | 2 SOC Simulator scenarios with results, 2 EC-Council course certificates |
+| **Progress** | 11 of 14 SOC Level 1 modules done, module 12 up next |
+| **Evidence** | 2 SOC Simulator scenarios with results, 1 malware analysis challenge, 2 EC-Council course certificates |
 
 [LinkedIn](https://www.linkedin.com/in/klobodanovic-adis/) | [Email](mailto:klobodanovic.adis.21@size.ba) | [TryHackMe profile](https://tryhackme.com/p/qdiss) | [Portfolio](https://adiss.dev)
 
@@ -36,6 +36,7 @@ I don't publish flags, answers, or credentials, as TryHackMe asks. The writeups 
 | [Data Exfiltration Detection](./07-network-security-monitoring/data-exfiltration-detection/) | Found data leaving the network over DNS, HTTP, FTP, and ICMP by matching Wireshark captures with Splunk logs |
 | [Web Shell Detection](./08-web-security-monitoring/web-shell-detection/) | Followed a web shell upload through Apache access logs, auditd, and file system searches |
 | [Linux Threat Detection 2](./10-linux-security-monitoring/linux-threat-detection-2/) | Reconstructed a cryptominer infection (SSH brute force, discovery, persistence, malware transfer) from auth and auditd logs |
+| [Shadow Trace (Challenge)](./11-malware-concepts/shadow-trace/) | Analysed a fake updater binary, extracted its IOCs, and correlated them with EDR alerts to trace the infection |
 
 ## SOC Simulator Results
 
@@ -64,6 +65,8 @@ I failed my first attempt at Introduction to Phishing because I marked one phish
 - Windows event logs: logons (4624/4625), user management events, and process creation
 - Sysmon events for processes, files, registry, network, and DNS
 - PowerShell history for tracking attacker commands
+- Detecting Living Off the Land abuse of PowerShell, WMIC, Certutil, Mshta, Rundll32, and scheduled tasks from command lines and process creation logs (4688, Sysmon 1, 4698)
+- Reading Splunk-style detections for LoL activity and using LOLBAS and GTFOBins as references
 
 **Linux log analysis**
 - Reading plain-text Linux logs in `/var/log` (`syslog`, `auth.log`, package manager logs) and filtering them with `grep`
@@ -76,6 +79,15 @@ I failed my first attempt at Introduction to Phishing because I marked one phish
 - SSH brute force and successful logins in `auth.log`, and ingress tool transfer detection
 - Reconstructing a cryptominer infection chain from Linux logs
 - Detecting reverse shells, privilege escalation, and persistence (cron, systemd, new users, SSH keys)
+
+**Malware analysis**
+- Safe malware handling: isolated Remnux VM, snapshots, password-protected archives
+- Basic static analysis: `file`, `strings`, file hashing, and VirusTotal lookups by hash
+- PE header analysis with `pecheck` and `pe-tree`: sections, entropy, and imports
+- Reading sandbox reports (Hybrid Analysis): verdict, process tree, MITRE mapping, and network activity
+- Recognising packing, obfuscation, and sandbox evasion techniques
+- Classifying malware by behaviour: ransomware, wipers, stealers, keyloggers, C2, and cryptominers
+- Extracting IOCs (hash, URL, domain) from a suspicious binary and correlating them with EDR alerts
 
 **Threat frameworks and hunting**
 - Pyramid of Pain, Cyber Kill Chain, and Unified Kill Chain
@@ -103,7 +115,7 @@ I failed my first attempt at Introduction to Phishing because I marked one phish
 
 ## Tools
 
-TryHackMe SOC Simulator, Splunk, Elastic Stack (Kibana), Wireshark, NetworkMiner, Snort, Sysmon, Windows Event Viewer, auditd and ausearch, CyberChef, VirusTotal and other URL/IP reputation tools, a simulated EDR console, Apache/Nginx access logs, and the Linux command line (grep, find, cut). I add to this list as I learn new tools.
+TryHackMe SOC Simulator, Splunk, Elastic Stack (Kibana), Wireshark, NetworkMiner, Snort, Sysmon, Windows Event Viewer, auditd and ausearch, CyberChef, VirusTotal and other URL/IP reputation tools, a simulated EDR console, Apache/Nginx access logs, and the Linux command line (grep, find, cut). For malware analysis: Remnux, `file`, `strings`, hashing tools, `pecheck`, `pe-tree`, and Hybrid Analysis. I add to this list as I learn new tools.
 
 ## Progress - TryHackMe SOC Level 1
 
@@ -237,27 +249,38 @@ Click a module to open it.
 
 </details>
 
-<details open>
-<summary><b>11. Malware Concepts for SOC</b> (in progress)</summary>
+<details>
+<summary><b>11. Malware Concepts for SOC</b> (completed)</summary>
 
 - [x] Malware Classification
-- [ ] Intro to Malware Analysis
-- [ ] Living Off the Land Attacks
-- [ ] Shadow Trace - Challenge 
+- [x] Intro to Malware Analysis
+- [x] Living Off the Land Attacks
+- [x] Shadow Trace (Challenge)
 
 [Open writeups](./11-malware-concepts/)
 
 </details>
 
+<details open>
+<summary><b>12. Threat Analysis Tools</b> (in progress)</summary>
+
+- [ ] Intro to Cyber Threat Intel
+- [ ] File and Hash Threat Intel
+- [ ] IP and Domain Threat Intel
+- [ ] Invite Only (Challenge)
+
+[Open writeups](./12-threat-analysis-tools/)
+
+</details>
+
 Not started yet:
 
-12. Threat Analysis Tools
 13. SIEM Triage for SOC
 14. SOC Level 1 Capstone Challenges
 
 ## What I'm Working On
 
-I'm in Malware Concepts for SOC now. After that come threat analysis tools, SIEM triage, and the capstone. Once I finish the path I plan to go for an entry-level SOC certification.
+I just finished Malware Concepts for SOC. Next come threat analysis tools, SIEM triage, and the capstone. Once I finish the path I plan to go for an entry-level SOC certification.
 
 ## Certificates and Additional Training
 
